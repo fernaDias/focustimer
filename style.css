@@ -44,6 +44,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  gap: 3.243m;
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vw, 10.8rem);
   
   border-radius: 9999px;
 }
