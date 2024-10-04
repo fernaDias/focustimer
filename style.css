@@ -35,7 +35,7 @@ button {
 }
 
 main {
-  /* align-self: end; */
+  align-self: end;
   justify-self: center;
 }
 
@@ -45,6 +45,7 @@ main {
 
   display: flex;
   margin-bottom: 1.6rem;
+
 }
 
 #controls {
