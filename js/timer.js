@@ -29,3 +29,5 @@ function countDown() {
     countDown();
   }, 1000);
 }
+
+export {countDown, resetTimer }
