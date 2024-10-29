@@ -2,9 +2,8 @@ export default function Controls({
   buttonPlay,
   buttonPause,
   buttonSet,
-  buttonStop
+  buttonStop,
 }) {
-
   function play() {
     buttonPlay.classList.add("hide");
     buttonPause.classList.remove("hide");
@@ -25,17 +24,17 @@ export default function Controls({
   }
 
   function getMinutes() {
-    let  newMminutes = prompt("Quantos minutos?")
-  if (!newMminutes){
-    return false
-  }
-   return newMminutes
+    let newMminutes = prompt("Quantos minutos?");
+    if (!newMminutes) {
+      return false;
+    }
+    return newMminutes;
   }
 
   return {
     reset,
     play,
     pause,
-    getMinutes
-  }
+    getMinutes,
+  };
 }
