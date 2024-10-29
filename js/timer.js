@@ -1,9 +1,11 @@
 export default function Timer ({
   minutesDisplay,
   secondsDisplay,
-  timerTimeOut,
-  resetControls
+  resetControls,
 }) {
+  let timerTimeOut
+  let minutes = Number(minutesDisplay.textContent)
+
   function reset() {
     updateDisplay(minutes, 0);
     clearTimeout(timerTimeOut);
@@ -36,10 +38,20 @@ export default function Timer ({
     }, 1000);
   }
 
+  function updateMinutes(newMinutes) {
+    minutes = newMinutes
+  }
+
+  function hold() {
+    clearTimeout(timerTimeOut)
+  }
+
   return {
     countDown,
     reset,
-    updateDisplay
+    updateDisplay,
+    updateMinutes,
+    hold
   }
 }
 
